@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      REC mic
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button color="secondary" full (click)="startRec()">REC Start</button>
+
+  <p>status: {{status}}</p>
+  <p>amp: {{amp}}</p>
+
+<button ion-button color="secondary" full (click)="openModal()">RECED Files</button>
+</ion-content>

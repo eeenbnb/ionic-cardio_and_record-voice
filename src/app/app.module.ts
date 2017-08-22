@@ -3,19 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
+//pages
+import { ScanPage } from '../pages/card-scan/scan';
+import { RecPage } from '../pages/rec/rec';
+import { RecModalPage } from '../pages/rec/rec-modal/rec-modal';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
+//ionic native
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { CardIO } from '@ionic-native/card-io';
+import { Media } from '@ionic-native/media';
+import { File } from '@ionic-native/file';
+import { AndroidPermissions } from '@ionic-native/android-permissions';
+
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
+    ScanPage,
+    RecPage,
+    RecModalPage,
     HomePage,
     TabsPage
   ],
@@ -26,14 +35,19 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
+    ScanPage,
+    RecPage,
+    RecModalPage,
     HomePage,
     TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    CardIO,
+    Media,
+    File,
+    AndroidPermissions,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
